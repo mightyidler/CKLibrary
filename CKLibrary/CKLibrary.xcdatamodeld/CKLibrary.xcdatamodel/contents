@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17189" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Liked" representedClassName="Liked" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="cno" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SearchRecord" representedClassName="SearchRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="text" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Liked" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="SearchRecord" positionX="-63" positionY="9" width="128" height="58"/>
+    </elements>
 </model>
