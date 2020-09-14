@@ -114,7 +114,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="이번 달 인기도서" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MaE-m9-0Fi">
                                         <rect key="frame" x="150.5" y="8" width="113" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="dUy-8T-eyC"/>
+                                            <constraint firstAttribute="height" constant="44" id="u3W-15-A0b"/>
                                         </constraints>
                                         <color key="textColor" name="LabelSecond"/>
                                         <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="17"/>
@@ -123,13 +123,13 @@
                                 </subviews>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="MaE-m9-0Fi" firstAttribute="centerX" secondItem="3y6-rF-Qmh" secondAttribute="centerX" id="5H0-Mg-JSA"/>
-                                    <constraint firstItem="MaE-m9-0Fi" firstAttribute="centerY" secondItem="3y6-rF-Qmh" secondAttribute="centerY" id="9Kc-Le-xEv"/>
-                                    <constraint firstItem="MaE-m9-0Fi" firstAttribute="top" secondItem="3y6-rF-Qmh" secondAttribute="top" constant="8" id="Fyk-WN-gng"/>
+                                    <constraint firstItem="MaE-m9-0Fi" firstAttribute="centerX" secondItem="3y6-rF-Qmh" secondAttribute="centerX" id="0wI-Bq-KLg"/>
+                                    <constraint firstItem="MaE-m9-0Fi" firstAttribute="centerY" secondItem="3y6-rF-Qmh" secondAttribute="centerY" id="1cp-7a-InA"/>
+                                    <constraint firstItem="MaE-m9-0Fi" firstAttribute="top" secondItem="3y6-rF-Qmh" secondAttribute="top" constant="8" id="8yt-tz-bpF"/>
                                     <constraint firstItem="fnE-Y7-1fj" firstAttribute="leading" secondItem="3y6-rF-Qmh" secondAttribute="leading" constant="8" id="GGe-bO-r4O"/>
+                                    <constraint firstAttribute="bottom" secondItem="MaE-m9-0Fi" secondAttribute="bottom" constant="8" id="KS0-L3-k6I"/>
                                     <constraint firstAttribute="height" constant="60" id="N8T-v9-tYp"/>
                                     <constraint firstItem="fnE-Y7-1fj" firstAttribute="centerY" secondItem="3y6-rF-Qmh" secondAttribute="centerY" id="NmR-L0-zGj"/>
-                                    <constraint firstAttribute="bottom" secondItem="MaE-m9-0Fi" secondAttribute="bottom" constant="8" id="ofp-MA-C4Z"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -455,7 +455,7 @@
             <objects>
                 <navigationController storyboardIdentifier="RentListNavigationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="1Yy-Df-P6k" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="대여목록" id="bCr-c3-SLL">
-                        <imageReference key="image" image="book.closed" catalog="system" symbolScale="large" renderingMode="template"/>
+                        <imageReference key="image" image="book" renderingMode="template"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j39-UQ-4FC">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1459,7 +1459,7 @@
     </scenes>
     <resources>
         <image name="Logo" width="232" height="138"/>
-        <image name="book.closed" catalog="system" width="115" height="128"/>
+        <image name="book" width="11" height="14"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="heart" catalog="system" width="128" height="109"/>

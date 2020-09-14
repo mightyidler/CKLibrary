@@ -32,6 +32,8 @@ class RentListVC: UIViewController {
     var currentId: String!
     var currentPw: String!
     
+    var isLoading: Bool!
+    
     var rentedBooks: [rentedBook] = []
     
     override func viewDidLoad() {
@@ -41,10 +43,15 @@ class RentListVC: UIViewController {
         self.tableView.dataSource = self
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
+        self.isLoading = true
+        
         self.tableView.tableFooterView = UIView ()
         
         currentId = UserDefaults.standard.value(forKey: "id") as? String
-        loadRentList()
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.loadRentList()
+        }
+        
         
         if let shadowColor = UIColor(named: "TopBarShadowColor") { self.border.backgroundColor = shadowColor.cgColor }
         
@@ -68,6 +75,19 @@ class RentListVC: UIViewController {
         emptyMessageView.addSubview(emptyMessageLabel)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.tableView.refreshControl?.beginRefreshing()
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        DispatchQueue.main.async {
+            self.tableView.refreshControl?.endRefreshing()
+        }
+    }
     
     @objc func pullToRefresh(_ sender: Any) {
         self.loadRentList()
@@ -150,6 +170,7 @@ extension RentListVC: UITableViewDataSource {
         if let dates = listCell.viewWithTag(3) as? UILabel {
             dates.text = self.rentedBooks[indexPath.row].dates
         }
+        
 //        if let status = listCell.viewWithTag(4) as? UIButton {
 //            let statusText = self.rentedBooks[indexPath.row].status
 //            status.setBackgroundColor(UIColor.lightGray, for: .disabled)
@@ -173,53 +194,49 @@ extension RentListVC: UITableViewDataSource {
         request.httpMethod = "POST"
         request.httpBody = postData
         
-        DispatchQueue.global(qos: .userInitiated).async {
-            DispatchQueue.main.async {
-                let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                    guard let data = data else {
-                        print(String(describing: error))
-                        return
-                    }
-                    if let html = String(data: data, encoding: .utf8){
-                        do {
-                            let doc : Document = try SwiftSoup.parse(html)
-                            let bestBook: Elements = try doc.select("ul.quick_right").select("li").select("a")
-                            if let name = try bestBook.first()?.text() {
-                                self.currentId = id
-                                self.currentPw = pass
-                                //login succese
-                            } else {
-                                //login fail
-                                UserDefaults.standard.removeObject(forKey: "name")
-                                UserDefaults.standard.removeObject(forKey: "id")
-                                UserDefaults.standard.removeObject(forKey: "password")
-                                UserDefaults.standard.synchronize()
-                                
-                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                let overlayView = UIScreen.main.snapshotView(afterScreenUpdates: false)
-                                loginVC.view.addSubview(overlayView)
-                                self.view.window!.rootViewController = loginVC
-                                UIView.animate(withDuration: 0.4, delay: 0, options: .transitionCrossDissolve, animations: {
-                                    overlayView.alpha = 0
-                                }, completion: { finished in
-                                    overlayView.removeFromSuperview()
-                                })
-                            }
-                            completion()
-                        }
-                        catch{
-                            DispatchQueue.main.async {
-                                self.tableView.tableFooterView = self.emptyMessageView
-                            }
-                        }
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                return
+            }
+            if let html = String(data: data, encoding: .utf8){
+                do {
+                    let doc : Document = try SwiftSoup.parse(html)
+                    let bestBook: Elements = try doc.select("ul.quick_right").select("li").select("a")
+                    if let name = try bestBook.first()?.text() {
+                        self.currentId = id
+                        self.currentPw = pass
+                        //login succese
+                    } else {
+                        //login fail
+                        UserDefaults.standard.removeObject(forKey: "name")
+                        UserDefaults.standard.removeObject(forKey: "id")
+                        UserDefaults.standard.removeObject(forKey: "password")
+                        UserDefaults.standard.synchronize()
                         
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+                        let overlayView = UIScreen.main.snapshotView(afterScreenUpdates: false)
+                        loginVC.view.addSubview(overlayView)
+                        self.view.window!.rootViewController = loginVC
+                        UIView.animate(withDuration: 0.4, delay: 0, options: .transitionCrossDissolve, animations: {
+                            overlayView.alpha = 0
+                        }, completion: { finished in
+                            overlayView.removeFromSuperview()
+                        })
+                    }
+                    completion()
+                }
+                catch{
+                    DispatchQueue.main.async {
+                        self.tableView.tableFooterView = self.emptyMessageView
                     }
                 }
                 
-                task.resume()
             }
         }
+        
+        task.resume()
     }
     
     
@@ -236,53 +253,50 @@ extension RentListVC: UITableViewDataSource {
         request.httpMethod = "POST"
         request.httpBody = postData
         
-        DispatchQueue.global(qos: .userInitiated).async {
-            DispatchQueue.main.async {
-                let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                    guard let data = data else {
-                        print(String(describing: error))
-                        return
-                    }
-                    if let html = String(data: data, encoding: .utf8){
-                        print(html)
-                        do {
-                            let doc : Document = try SwiftSoup.parse(html)
-                            let paragraph: Elements = try doc.select("div.paragraph")
-                            let books = paragraph.first()
-                            if let table = try books?.select("tbody").select("tr"){
-                                for element in table.array() {
-                                    if try element.select("td").count < 2 {
-                                        DispatchQueue.main.async {
-                                            self.tableView.tableFooterView = self.emptyMessageView
-                                        }
-                                    }else {
-                                        let title = try element.select("td").eq(1).text().components(separatedBy: ["=", "+", "/", ":", ",", ".", ";"]).joined()
-                                        let cno = try String(element.select("td").eq(1).select("a").attr("href").dropFirst(44))
-                                        let dates = "\(try element.select("td").eq(3).text())~\(try element.select("td").eq(4).text())"
-                                        let status = try element.select("td").eq(5).text()
-                                        let book = rentedBook.init(title: title, cno: cno, dates: dates, status: status)
-                                        self.rentedBooks.append(book)
-                                        
-                                    }
-                                    self.reloadTable()
-                                }
-                            } else {
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                print(String(describing: error))
+                return
+            }
+            if let html = String(data: data, encoding: .utf8){
+                print(html)
+                do {
+                    let doc : Document = try SwiftSoup.parse(html)
+                    let paragraph: Elements = try doc.select("div.paragraph")
+                    let books = paragraph.first()
+                    if let table = try books?.select("tbody").select("tr"){
+                        for element in table.array() {
+                            if try element.select("td").count < 2 {
                                 DispatchQueue.main.async {
                                     self.tableView.tableFooterView = self.emptyMessageView
                                 }
+                            }else {
+                                let title = try element.select("td").eq(1).text().components(separatedBy: ["=", "+", "/", ":", ",", ".", ";"]).joined()
+                                let cno = try String(element.select("td").eq(1).select("a").attr("href").dropFirst(44))
+                                let dates = "\(try element.select("td").eq(3).text())~\(try element.select("td").eq(4).text())"
+                                let status = try element.select("td").eq(5).text()
+                                let book = rentedBook.init(title: title, cno: cno, dates: dates, status: status)
+                                self.rentedBooks.append(book)
+                                
                             }
+                            self.reloadTable()
                         }
-                        catch{
-                            DispatchQueue.main.async {
-                                self.tableView.tableFooterView = self.emptyMessageView
-                            }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.tableView.tableFooterView = self.emptyMessageView
                         }
                     }
                 }
-                task.resume()
+                catch{
+                    DispatchQueue.main.async {
+                        self.tableView.tableFooterView = self.emptyMessageView
+                    }
+                }
             }
         }
+        task.resume()
     }
+    
 }
 
 extension RentListVC {

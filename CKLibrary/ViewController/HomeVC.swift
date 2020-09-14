@@ -70,9 +70,37 @@ class HomeVC: UIViewController {
         emptyMessageView.addSubview(emptyMessageLabel)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.tableView.refreshControl?.beginRefreshing()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        DispatchQueue.main.async {
+            self.tableView.refreshControl?.endRefreshing()
+        }
+    }
+    
+    //table object init
+    func initTableObject() {
+        bestBooks = []
+        newBooks = []
+        recBooks = []
+        contentList = []
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     //reload when table pull
     @objc func pullToRefresh(_ sender: Any) {
-        self.reloadData()
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.initTableObject()
+            self.fetchHTMLParsing(completion: self.reloadData)
+        }
     }
     
     //reload data and table
