@@ -29,7 +29,6 @@
 		423FBA1E250A6E2500132F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423FBA1D250A6E2500132F2F /* Assets.xcassets */; };
 		423FBA20250A6E2500132F2F /* CKLibraryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 423FBA1C250A6E2400132F2F /* CKLibraryWidget.intentdefinition */; };
 		423FBA21250A6E2500132F2F /* CKLibraryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 423FBA1C250A6E2400132F2F /* CKLibraryWidget.intentdefinition */; };
-		423FBA24250A6E2500132F2F /* CKLibraryWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 423FBA14250A6E2400132F2F /* CKLibraryWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4240F3B624D027830052A6C3 /* FindBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240F3B524D027830052A6C3 /* FindBookVC.swift */; };
 		4240F3B824D0287C0052A6C3 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4240F3B724D0287C0052A6C3 /* ARKit.framework */; };
 		4240F3BA24D062570052A6C3 /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4240F3B924D062570052A6C3 /* RealityKit.framework */; };
@@ -46,30 +45,6 @@
 		42F54F9424CD974600BF4131 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F54F9324CD974500BF4131 /* LoginVC.swift */; };
 		E645C2319A345BCCB0E61FF8 /* Pods_CKLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B95219A2FE5DC6DA8B5170A /* Pods_CKLibrary.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		423FBA22250A6E2500132F2F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4236DBCA24BA1D8D0064FC09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 423FBA13250A6E2400132F2F;
-			remoteInfo = CKLibraryWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		423FBA28250A6E2500132F2F /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				423FBA24250A6E2500132F2F /* CKLibraryWidgetExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		420BEBF024CC5DE8008085C8 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -264,12 +239,10 @@
 				4236DBCF24BA1D8D0064FC09 /* Frameworks */,
 				4236DBD024BA1D8D0064FC09 /* Resources */,
 				91B826FAA9643C9A4CA927CB /* [CP] Embed Pods Frameworks */,
-				423FBA28250A6E2500132F2F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				423FBA23250A6E2500132F2F /* PBXTargetDependency */,
 			);
 			name = CKLibrary;
 			productName = CKLibrary;
@@ -436,14 +409,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		423FBA23250A6E2500132F2F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 423FBA13250A6E2400132F2F /* CKLibraryWidgetExtension */;
-			targetProxy = 423FBA22250A6E2500132F2F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		4236DBDB24BA1D8D0064FC09 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -515,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -570,7 +535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -584,10 +549,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6109B03458DEB2A0BFB02E7C /* Pods-CKLibrary.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = 87MK6Z3WD5;
 				INFOPLIST_FILE = CKLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -606,10 +571,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F276186E12131D647F29DB5 /* Pods-CKLibrary.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = 87MK6Z3WD5;
 				INFOPLIST_FILE = CKLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

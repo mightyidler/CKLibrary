@@ -75,19 +75,19 @@ class RentListVC: UIViewController {
         emptyMessageView.addSubview(emptyMessageLabel)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        DispatchQueue.main.async {
-            self.tableView.refreshControl?.beginRefreshing()
-        }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        DispatchQueue.main.async {
-            self.tableView.refreshControl?.endRefreshing()
-        }
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        DispatchQueue.main.async {
+//            self.tableView.refreshControl?.beginRefreshing()
+//        }
+//    }
+//
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        DispatchQueue.main.async {
+//            self.tableView.refreshControl?.endRefreshing()
+//        }
+//    }
     
     @objc func pullToRefresh(_ sender: Any) {
         self.loadRentList()
