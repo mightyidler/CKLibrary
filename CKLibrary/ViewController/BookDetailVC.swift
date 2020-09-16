@@ -295,50 +295,51 @@ class BookDetailVC: UIViewController {
 }
 
 extension BookDetailVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.section == 1 else { return }
-        
-        //need more time for AR
-        guard false else {
-            let dialogMessage = UIAlertController(title: "AR 도서 찾기는 준비중입니다.", message: nil, preferredStyle: .alert)
-            let when = DispatchTime.now() + 1
-            self.present(dialogMessage, animated: true, completion: nil)
-            DispatchQueue.main.asyncAfter(deadline: when){
-                dialogMessage.dismiss(animated: true, completion: nil)
-            }
-            
-            return
-        }
-        
-        guard bookstates[indexPath.row].position == "자료열람실" else {
-            let dialogMessage = UIAlertController(title: "AR도서 찾기는 자료열람실만 지원합니다.", message: nil, preferredStyle: .alert)
-            let when = DispatchTime.now() + 1
-            self.present(dialogMessage, animated: true, completion: nil)
-            DispatchQueue.main.asyncAfter(deadline: when){
-                dialogMessage.dismiss(animated: true, completion: nil)
-            }
-            
-            return
-        }
-        guard bookstates[indexPath.row].status == "대출가능" else {
-            let dialogMessage = UIAlertController(title: "대출이 불가능한 도서입니다.", message: nil, preferredStyle: .alert)
-            let when = DispatchTime.now() + 1
-            self.present(dialogMessage, animated: true, completion: nil)
-            DispatchQueue.main.asyncAfter(deadline: when){
-                dialogMessage.dismiss(animated: true, completion: nil)
-            }
-            return
-        }
-        guard let findBookVC = self.storyboard?.instantiateViewController(withIdentifier: "FindBookVC") as? FindBookVC else {
-            return
-        }
-        findBookVC.bookTitle = self.bookTitle
-        findBookVC.bookAuthor = self.author
-        findBookVC.bookCno = self.cno
-        findBookVC.bookPosition = bookstates[indexPath.row].position
-        findBookVC.bookCallNumber = bookstates[indexPath.row].callNumber
-        show(findBookVC, sender: indexPath)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        guard indexPath.section == 1 else { return }
+//        
+//        //need more time for AR
+////        guard false else {
+////            let dialogMessage = UIAlertController(title: "AR 도서 찾기는 준비중입니다.", message: nil, preferredStyle: .alert)
+////            let when = DispatchTime.now() + 1
+////            self.present(dialogMessage, animated: true, completion: nil)
+////            DispatchQueue.main.asyncAfter(deadline: when){
+////                dialogMessage.dismiss(animated: true, completion: nil)
+////            }
+////            
+////            return
+////        }
+//        
+//        guard bookstates[indexPath.row].position == "자료열람실" else {
+//            let dialogMessage = UIAlertController(title: "AR도서 찾기는 자료열람실만 지원합니다.", message: nil, preferredStyle: .alert)
+//            let when = DispatchTime.now() + 1
+//            self.present(dialogMessage, animated: true, completion: nil)
+//            DispatchQueue.main.asyncAfter(deadline: when){
+//                dialogMessage.dismiss(animated: true, completion: nil)
+//            }
+//            
+//            return
+//        }
+//        guard bookstates[indexPath.row].status == "대출가능" else {
+//            let dialogMessage = UIAlertController(title: "대출이 불가능한 도서입니다.", message: nil, preferredStyle: .alert)
+//            let when = DispatchTime.now() + 1
+//            self.present(dialogMessage, animated: true, completion: nil)
+//            DispatchQueue.main.asyncAfter(deadline: when){
+//                dialogMessage.dismiss(animated: true, completion: nil)
+//            }
+//            return
+//        }
+//        guard let findBookVC = self.storyboard?.instantiateViewController(withIdentifier: "FindBookVC") as? FindBookVC else {
+//            return
+//        }
+//        findBookVC.bookTitle = self.bookTitle
+//        findBookVC.bookAuthor = self.author
+//        findBookVC.bookCno = self.cno
+//        findBookVC.bookPosition = bookstates[indexPath.row].position
+//        findBookVC.bookCallNumber = bookstates[indexPath.row].callNumber
+//        show(findBookVC, sender: indexPath)
+//    }
+    
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             UIView.animate(withDuration: 0.2) {

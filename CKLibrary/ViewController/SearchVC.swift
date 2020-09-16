@@ -7,8 +7,6 @@
 
 import UIKit
 import CoreData
-import SwiftSoup
-import Alamofire
 import SwiftyJSON
 import Kingfisher
 

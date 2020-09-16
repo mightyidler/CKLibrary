@@ -7,8 +7,6 @@
 
 import UIKit
 import SwiftSoup
-import Alamofire
-import SwiftyJSON
 	
 struct book {
     var title: String
@@ -26,6 +24,9 @@ class HomeVC: UIViewController {
     var newBooks: [book] = []
     var recBooks: [book] = []
     var contentList: [String] = []
+    
+    //loading states indicator
+    var isLoading: Bool!
     
     //navigation bar seperator
     let border = CALayer()
@@ -73,14 +74,18 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
-            self.tableView.refreshControl?.beginRefreshing()
+            if self.isLoading {
+                self.tableView.refreshControl?.beginRefreshing()
+            }
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         DispatchQueue.main.async {
-            self.tableView.refreshControl?.endRefreshing()
+            if self.isLoading {
+                self.tableView.refreshControl?.endRefreshing()
+            }
         }
     }
     
@@ -108,11 +113,13 @@ class HomeVC: UIViewController {
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.tableView.refreshControl?.endRefreshing()
+            self.isLoading = false
         }
     }
     
     //html parsing
     func fetchHTMLParsing(completion: @escaping () -> ()){
+        self.isLoading = true
         let urlAddress = "http://library.ck.ac.kr/Cheetah/CKM/Index"
         guard let url = URL(string: urlAddress) else {
             DispatchQueue.main.async {

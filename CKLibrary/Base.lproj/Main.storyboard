@@ -578,11 +578,11 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" rowHeight="70" id="ioi-6u-8gN">
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" rowHeight="70" id="ioi-6u-8gN">
                                         <rect key="frame" x="0.0" y="203" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ioi-6u-8gN" id="Trm-V9-vYZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자료열람실" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ou-Vh-WJ8">
@@ -604,7 +604,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대출불가" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8C-P3-Ohi">
-                                                    <rect key="frame" x="312.5" y="25" width="62.5" height="20"/>
+                                                    <rect key="frame" x="331.5" y="25" width="62.5" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="jdR-lR-H0B"/>
                                                     </constraints>
@@ -625,7 +625,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="BackgroundColor"/>
-                                        <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -873,7 +873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6D4-6H-Iyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637.68115942029" y="-719.19642857142856"/>
+            <point key="canvasLocation" x="1681" y="-745"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="Do4-h9-z8a">
@@ -1026,7 +1026,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="TopBarShadowColor"/>
                                         <constraints>
                                             <constraint firstItem="9Vw-wJ-1uB" firstAttribute="top" secondItem="f6i-n4-nUv" secondAttribute="top" id="HWx-fe-fG8"/>
                                             <constraint firstAttribute="trailing" secondItem="9Vw-wJ-1uB" secondAttribute="trailing" constant="16" id="UPP-7m-E0e"/>
@@ -1223,7 +1223,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjt-nU-hpH">
                                         <rect key="frame" x="20" y="8" width="374" height="44"/>
-                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="TopBarShadowColor"/>
                                         <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="15"/>
                                         <color key="tintColor" name="LabelThird"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
@@ -1309,7 +1309,7 @@
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="TopBarShadowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KNY-ow-3pn"/>
                                     <constraint firstItem="dT1-s8-h6g" firstAttribute="top" secondItem="ftm-Gc-99l" secondAttribute="top" id="TYq-fc-Iha"/>
@@ -1328,7 +1328,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="TopBarShadowColor"/>
                                 <constraints>
                                     <constraint firstItem="9hC-M4-imG" firstAttribute="leading" secondItem="AMn-iA-H7P" secondAttribute="leading" constant="20" id="1FF-Ue-khm"/>
                                     <constraint firstItem="9hC-M4-imG" firstAttribute="top" secondItem="AMn-iA-H7P" secondAttribute="top" id="Qwv-WG-Nt9"/>
@@ -1371,7 +1371,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="17"/>
                                 <state key="normal" title="건너뛰기">
-                                    <color key="titleColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="LabelFourth"/>
                                 </state>
                                 <connections>
                                     <action selector="skipLoginButton:" destination="poz-hD-epr" eventType="touchUpInside" id="Yqs-YS-vyf"/>
@@ -1473,6 +1473,9 @@
         </namedColor>
         <namedColor name="LabelThird">
             <color red="0.63099998235702515" green="0.63099998235702515" blue="0.63099998235702515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TopBarShadowColor">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.50199997425079346" alpha="0.079999998211860657" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

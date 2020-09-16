@@ -141,7 +141,8 @@ extension ProfileVC: UITableViewDelegate {
             }
             completionHandler(true)
         }
-        deleteAction.image = UIImage(systemName: "trash.fill")
+        //deleteAction.image = UIImage(systemName: "trash.fill")
+        deleteAction.title = "제거"
         deleteAction.backgroundColor = .systemRed
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         return configuration

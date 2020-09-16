@@ -30,8 +30,6 @@
 		423FBA20250A6E2500132F2F /* CKLibraryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 423FBA1C250A6E2400132F2F /* CKLibraryWidget.intentdefinition */; };
 		423FBA21250A6E2500132F2F /* CKLibraryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 423FBA1C250A6E2400132F2F /* CKLibraryWidget.intentdefinition */; };
 		4240F3B624D027830052A6C3 /* FindBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240F3B524D027830052A6C3 /* FindBookVC.swift */; };
-		4240F3B824D0287C0052A6C3 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4240F3B724D0287C0052A6C3 /* ARKit.framework */; };
-		4240F3BA24D062570052A6C3 /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4240F3B924D062570052A6C3 /* RealityKit.framework */; };
 		4240F3BC24D0625F0052A6C3 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4240F3BB24D0625F0052A6C3 /* ExternalAccessory.framework */; };
 		428F937F250A27BB003925D7 /* NanumSquareRoundOTFL.otf in Resources */ = {isa = PBXBuildFile; fileRef = 428F937B250A27BB003925D7 /* NanumSquareRoundOTFL.otf */; };
 		428F9380250A27BB003925D7 /* NanumSquareRoundOTFR.otf in Resources */ = {isa = PBXBuildFile; fileRef = 428F937C250A27BB003925D7 /* NanumSquareRoundOTFR.otf */; };
@@ -42,6 +40,7 @@
 		42BE11EC2505383D00297786 /* CollageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE11EB2505383D00297786 /* CollageTableViewCell.swift */; };
 		42CA0C6924D41EAE007EFDB4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA0C6824D41EAE007EFDB4 /* HomeVC.swift */; };
 		42CA0C6B24D41F9C007EFDB4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA0C6A24D41F9C007EFDB4 /* HomeTableViewCell.swift */; };
+		42F32E302511ABD1007153CA /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42F32E322511ABD1007153CA /* AppIntentVocabulary.plist */; };
 		42F54F9424CD974600BF4131 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F54F9324CD974500BF4131 /* LoginVC.swift */; };
 		E645C2319A345BCCB0E61FF8 /* Pods_CKLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B95219A2FE5DC6DA8B5170A /* Pods_CKLibrary.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +84,8 @@
 		42BE11EB2505383D00297786 /* CollageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageTableViewCell.swift; sourceTree = "<group>"; };
 		42CA0C6824D41EAE007EFDB4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		42CA0C6A24D41F9C007EFDB4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		42F32E312511ABD1007153CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/AppIntentVocabulary.plist; sourceTree = "<group>"; };
+		42F32E332511ABD3007153CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/AppIntentVocabulary.plist; sourceTree = "<group>"; };
 		42F54F9324CD974500BF4131 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4B95219A2FE5DC6DA8B5170A /* Pods_CKLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6109B03458DEB2A0BFB02E7C /* Pods-CKLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKLibrary.debug.xcconfig"; path = "Target Support Files/Pods-CKLibrary/Pods-CKLibrary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,8 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4240F3BA24D062570052A6C3 /* RealityKit.framework in Frameworks */,
-				4240F3B824D0287C0052A6C3 /* ARKit.framework in Frameworks */,
 				4240F3BC24D0625F0052A6C3 /* ExternalAccessory.framework in Frameworks */,
 				E645C2319A345BCCB0E61FF8 /* Pods_CKLibrary.framework in Frameworks */,
 			);
@@ -183,6 +182,7 @@
 				4236DBE124BA1D8E0064FC09 /* Assets.xcassets */,
 				4236DBE624BA1D8E0064FC09 /* Info.plist */,
 				4236DBDE24BA1D8D0064FC09 /* CKLibrary.xcdatamodeld */,
+				42F32E322511ABD1007153CA /* AppIntentVocabulary.plist */,
 			);
 			path = CKLibrary;
 			sourceTree = "<group>";
@@ -312,6 +312,7 @@
 				4236DBE224BA1D8E0064FC09 /* Assets.xcassets in Resources */,
 				428F9381250A27BB003925D7 /* NanumSquareRoundOTFB.otf in Resources */,
 				428F937F250A27BB003925D7 /* NanumSquareRoundOTFL.otf in Resources */,
+				42F32E302511ABD1007153CA /* AppIntentVocabulary.plist in Resources */,
 				4216BB7D2505DA6500B010FD /* heart.json in Resources */,
 				4236DBDD24BA1D8D0064FC09 /* Main.storyboard in Resources */,
 				428F9380250A27BB003925D7 /* NanumSquareRoundOTFR.otf in Resources */,
@@ -426,6 +427,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		42F32E322511ABD1007153CA /* AppIntentVocabulary.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42F32E312511ABD1007153CA /* en */,
+				42F32E332511ABD3007153CA /* Base */,
+			);
+			name = AppIntentVocabulary.plist;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -433,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -494,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -552,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 87MK6Z3WD5;
 				INFOPLIST_FILE = CKLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -574,7 +586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 87MK6Z3WD5;
 				INFOPLIST_FILE = CKLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

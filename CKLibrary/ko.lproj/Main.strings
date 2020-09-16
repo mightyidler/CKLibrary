@@ -1,0 +1,120 @@
+
+/* Class = "UILabel"; text = "자료열람실"; ObjectID = "2Ou-Vh-WJ8"; */
+"2Ou-Vh-WJ8.text" = "자료열람실";
+
+/* Class = "UITabBarItem"; title = "탐색"; ObjectID = "30K-TT-Ch2"; */
+"30K-TT-Ch2.title" = "탐색";
+
+/* Class = "UILabel"; text = "박준 산문"; ObjectID = "4Nr-N0-DHK"; */
+"4Nr-N0-DHK.text" = "박준 산문";
+
+/* Class = "UILabel"; text = "833.6하12ㅇ"; ObjectID = "7Bz-tH-V0g"; */
+"7Bz-tH-V0g.text" = "833.6하12ㅇ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "91S-VE-BUU"; */
+"91S-VE-BUU.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "찾으시는 책이 있으신가요?"; ObjectID = "9Vw-wJ-1uB"; */
+"9Vw-wJ-1uB.placeholder" = "찾으시는 책이 있으신가요?";
+
+/* Class = "UITextField"; placeholder = "비밀번호를 입력해주세요."; ObjectID = "9hC-M4-imG"; */
+"9hC-M4-imG.placeholder" = "비밀번호를 입력해주세요.";
+
+/* Class = "UILabel"; text = "section"; ObjectID = "BHl-od-NsK"; */
+"BHl-od-NsK.text" = "section";
+
+/* Class = "UILabel"; text = "로그인이"; ObjectID = "Ce8-2E-e0E"; */
+"Ce8-2E-e0E.text" = "로그인이";
+
+/* Class = "UILabel"; text = "326.165"; ObjectID = "D4u-mA-wtV"; */
+"D4u-mA-wtV.text" = "326.165";
+
+/* Class = "UIButton"; normalTitle = "찾으시는 책이 있으신가요?"; ObjectID = "Jjt-nU-hpH"; */
+"Jjt-nU-hpH.normalTitle" = "찾으시는 책이 있으신가요?";
+
+/* Class = "UILabel"; text = "이번 달 인기도서"; ObjectID = "K9w-c1-O7m"; */
+"K9w-c1-O7m.text" = "이번 달 인기도서";
+
+/* Class = "UILabel"; text = "도서관"; ObjectID = "L0A-Hh-CrL"; */
+"L0A-Hh-CrL.text" = "도서관";
+
+/* Class = "UITextField"; text = "이번 달 인기도서"; ObjectID = "MaE-m9-0Fi"; */
+"MaE-m9-0Fi.text" = "이번 달 인기도서";
+
+/* Class = "UITabBarItem"; title = "내 정보"; ObjectID = "Mzu-XX-6f6"; */
+"Mzu-XX-6f6.title" = "내 정보";
+
+/* Class = "UINavigationItem"; title = "대여목록"; ObjectID = "U4L-mA-qxE"; */
+"U4L-mA-qxE.title" = "대여목록";
+
+/* Class = "UILabel"; text = "책제목은 이거입니다저거입니다책제목은 이거입니다저거입니다"; ObjectID = "UgD-SZ-PQ9"; */
+"UgD-SZ-PQ9.text" = "책제목은 이거입니다저거입니다책제목은 이거입니다저거입니다";
+
+/* Class = "UILabel"; text = "운다고 달라지는 일은 아무것도 없다는걸 알아야한다"; ObjectID = "VJI-cg-5il"; */
+"VJI-cg-5il.text" = "운다고 달라지는 일은 아무것도 없다는걸 알아야한다";
+
+/* Class = "UIButton"; disabledTitle = " "; ObjectID = "Z1Y-Ta-7eZ"; */
+"Z1Y-Ta-7eZ.disabledTitle" = " ";
+
+/* Class = "UIButton"; normalTitle = "로그인"; ObjectID = "Z1Y-Ta-7eZ"; */
+"Z1Y-Ta-7eZ.normalTitle" = "로그인";
+
+/* Class = "UIButton"; normalTitle = "건너뛰기"; ObjectID = "a2s-7G-Ef4"; */
+"a2s-7G-Ef4.normalTitle" = "건너뛰기";
+
+/* Class = "UILabel"; text = "대출불가"; ObjectID = "a8C-P3-Ohi"; */
+"a8C-P3-Ohi.text" = "대출불가";
+
+/* Class = "UILabel"; text = "2020-06-01 ~ 2020-07-24"; ObjectID = "b5v-mv-gJX"; */
+"b5v-mv-gJX.text" = "2020-06-01 ~ 2020-07-24";
+
+/* Class = "UITabBarItem"; title = "대여목록"; ObjectID = "bCr-c3-SLL"; */
+"bCr-c3-SLL.title" = "대여목록";
+
+/* Class = "UILabel"; text = "필요합니다."; ObjectID = "bud-G6-ghr"; */
+"bud-G6-ghr.text" = "필요합니다.";
+
+/* Class = "UITextField"; placeholder = "학번을 입력해주세요."; ObjectID = "dT1-s8-h6g"; */
+"dT1-s8-h6g.placeholder" = "학번을 입력해주세요.";
+
+/* Class = "UILabel"; text = "작가"; ObjectID = "dZt-wx-eYm"; */
+"dZt-wx-eYm.text" = "작가";
+
+/* Class = "UIButton"; normalTitle = "로그아웃"; ObjectID = "gMk-Vi-UVv"; */
+"gMk-Vi-UVv.normalTitle" = "로그아웃";
+
+/* Class = "UILabel"; text = "박준 | 나비의 활주로 | 2019박준 | 나비의 활주로 | 2019박준 | 나비의 활주로 | 2019"; ObjectID = "gxV-D8-rF1"; */
+"gxV-D8-rF1.text" = "박준 | 나비의 활주로 | 2019박준 | 나비의 활주로 | 2019박준 | 나비의 활주로 | 2019";
+
+/* Class = "UILabel"; text = "박준 산문"; ObjectID = "h2a-XB-R91"; */
+"h2a-XB-R91.text" = "박준 산문";
+
+/* Class = "UILabel"; text = "운다고 달라지는 일은 아무것도 없다는걸 알아야한다"; ObjectID = "hDb-aF-j9Y"; */
+"hDb-aF-j9Y.text" = "운다고 달라지는 일은 아무것도 없다는걸 알아야한다";
+
+/* Class = "UILabel"; text = "number"; ObjectID = "hQf-re-tcd"; */
+"hQf-re-tcd.text" = "number";
+
+/* Class = "UILabel"; text = "운다고 달라지는 일은 아무것도 없겠지만 운다고 달라지는 일은 아무것도 없겠지만"; ObjectID = "jUO-17-jNr"; */
+"jUO-17-jNr.text" = "운다고 달라지는 일은 아무것도 없겠지만 운다고 달라지는 일은 아무것도 없겠지만";
+
+/* Class = "UILabel"; text = "title"; ObjectID = "kcL-Kv-e8q"; */
+"kcL-Kv-e8q.text" = "title";
+
+/* Class = "UILabel"; text = "도서 정보"; ObjectID = "mGv-Tl-mBE"; */
+"mGv-Tl-mBE.text" = "도서 정보";
+
+/* Class = "UILabel"; text = "지은이입니다"; ObjectID = "ms6-a0-8cU"; */
+"ms6-a0-8cU.text" = "지은이입니다";
+
+/* Class = "UILabel"; text = "운다고 달라지는 일은 아무것도 없겠지만 뜨거운 여름밤은 가고 남은건 "; ObjectID = "oNo-em-eH8"; */
+"oNo-em-eH8.text" = "운다고 달라지는 일은 아무것도 없겠지만 뜨거운 여름밤은 가고 남은건 ";
+
+/* Class = "UILabel"; text = "운다고 달라지는 일은 아무것도 없다는걸 알아야한다"; ObjectID = "psE-wj-AlR"; */
+"psE-wj-AlR.text" = "운다고 달라지는 일은 아무것도 없다는걸 알아야한다";
+
+/* Class = "UILabel"; text = "내 정보"; ObjectID = "txi-n2-rVY"; */
+"txi-n2-rVY.text" = "내 정보";
+
+/* Class = "UILabel"; text = "대여목록"; ObjectID = "uTu-w8-hQh"; */
+"uTu-w8-hQh.text" = "대여목록";

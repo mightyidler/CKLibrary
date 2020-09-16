@@ -32,20 +32,17 @@ class RentListVC: UIViewController {
     var currentId: String!
     var currentPw: String!
     
-    var isLoading: Bool!
+    var isLoading: Bool = true
     
     var rentedBooks: [rentedBook] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
-        self.isLoading = true
-        
-        self.tableView.tableFooterView = UIView ()
         
         currentId = UserDefaults.standard.value(forKey: "id") as? String
         DispatchQueue.global(qos: .userInitiated).async {
@@ -73,21 +70,10 @@ class RentListVC: UIViewController {
         emptyMessageLabel.textAlignment = .center
         emptyMessageLabel.textColor = UIColor(named: "LabelThird")
         emptyMessageView.addSubview(emptyMessageLabel)
+        
+        self.tableView.tableFooterView = UIView ()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        DispatchQueue.main.async {
-//            self.tableView.refreshControl?.beginRefreshing()
-//        }
-//    }
-//
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        DispatchQueue.main.async {
-//            self.tableView.refreshControl?.endRefreshing()
-//        }
-//    }
     
     @objc func pullToRefresh(_ sender: Any) {
         self.loadRentList()
@@ -119,6 +105,7 @@ class RentListVC: UIViewController {
         DispatchQueue.main.async {
             self.tableView.refreshControl?.endRefreshing()
             self.tableView.reloadData()
+            self.isLoading = false
         }
     }
     
@@ -184,6 +171,7 @@ extension RentListVC: UITableViewDataSource {
     }
     
     func authCK(id: String, pass: String, completion: @escaping () -> ()){
+        self.isLoading = true
         let parameters = "loginId=\(id)&loginpwd=\(pass)"
         let postData =  parameters.data(using: .utf8)
         
