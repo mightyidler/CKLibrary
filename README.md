@@ -3,6 +3,8 @@
 Library Application for Chungkang Academy 
 청강문화산업대학교 도서관 애플리케이션(iOS)
 
+![enter image description here](https://user-images.githubusercontent.com/26451551/93713819-6158d080-fb99-11ea-864e-41c84a2328af.png)
+
 ## Screenshots
 ![enter image description here](https://user-images.githubusercontent.com/26451551/93711609-a6293b00-fb8a-11ea-85b5-b47cf230a423.png)
 ![enter image description here](https://user-images.githubusercontent.com/26451551/93711627-b93c0b00-fb8a-11ea-8d42-73c698a88119.png)
